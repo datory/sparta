@@ -68,3 +68,18 @@
 
 ## 3일차 과제
 
+    from wordcloud import WordCloud
+    from PIL import Image
+    import numpy as np
+
+    text = ''
+    with open("20210919_장태산_대화.txt", "r", encoding="utf-8") as f:
+        lines = f.readlines()
+        for line in lines:
+            if '] [' in line:
+                text += line.split('] ')[2].replace('그럼', '').replace('근데', '').replace('나도', '').replace('나', '').replace('난', '').replace('아', '').replace('ㅋ', '').replace('ㅠ', '').replace('ㅜ', '').replace('이모티콘\n', '').replace('사진\n', '').replace('삭제된 메시지입니다.\n', '')
+
+    mask = np.array(Image.open('cloud.png'))
+    wc = WordCloud(font_path='C:/WINDOWS/Fonts/malgun.ttf', background_color="white", mask=mask)
+    wc.generate(text)
+    wc.to_file("result_masked.png")
