@@ -21,6 +21,9 @@
 스파르타코딩클럽 추석 이벤트 참여하러가기
 https://spartacodingclub.kr/?f_name=%EA%B9%80%EC%84%B8%ED%99%98&f_uid=6139b57d2dfe198f0c6aa773
 
+[스파르타코딩클럽] 파이썬 혼자놀기 패키지 노션 강의자료
+https://www.notion.so/0cbbfc077f87439bb2bd6657b1dd12aa
+
 ## 1일차 과제
 
     from bs4 import BeautifulSoup
